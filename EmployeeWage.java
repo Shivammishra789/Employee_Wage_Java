@@ -1,29 +1,44 @@
 public class EmployeeWage {
 
-   public static void main(String[] args) {
+ public static void main(String[] args) {
+
+	//Constants declared
 
         int Wage_Per_Day = 20;
+
         int Full_Day_Hr = 8;
+
+        int Is_Part_Time = 2;
+
         int Is_Present = 1;
 
-        double Emp_Check = Math.floor(Math.random() *10 )%2;
+        int Part_Day_Hr = 4;
 
-         if (Emp_Check == Is_Present ) {
+        double Emp_Check = Math.floor(Math.random() *10 )%3;
 
+	//Conditional statement used to check present absent or parttime
 
-                 int Emp_Wage = Wage_Per_Day * Full_Day_Hr;
+        if (Emp_Check == Is_Present ) {
 
-                System.out.println("Employee daily wage is " + Emp_Wage);
+                int Emp_Wage = Wage_Per_Day * Full_Day_Hr;
+
+                System.out.println("Employee daily wage is " + Emp_Wage );
+
+                }
+        else if (Emp_Check == Is_Part_Time) {
+
+                int Emp_Wage = Wage_Per_Day * Part_Day_Hr;
+
+                System.out.println("Employee daily wage is " + Emp_Wage );
 
                 }
 
         else {
 
-                System.out.println("Employee daily wage is 0 " );
 
+                System.out.println("Employee daily wage is 0 " );
 
                 }
           }
     }
-
 
