@@ -15,19 +15,23 @@ public class EmployeeWage {
 
         int Part_Day_Hr = 4;
 
-	//Getting random number 
+	int Monthly_Wage = 0;
+
+        //check condition for 20 days and get monthly salary
+
+        for(int i=1;i<=20;i++){
 
         double Emp_Check = Math.floor(Math.random() *10 )%3;
 
-        //Switch Case Statement used
+         //Switch Case Statement used
 
         switch((int) Emp_Check){
 
         case 1: {
 
-                 int Emp_Wage = Wage_Per_Day * Full_Day_Hr;
+                int Emp_Wage = Wage_Per_Day * Full_Day_Hr;
 
-                 System.out.println("Employee daily wage is " + Emp_Wage );
+                Monthly_Wage+=Emp_Wage;
 
                  }
                  break;
@@ -36,17 +40,21 @@ public class EmployeeWage {
 
                 int Emp_Wage = Wage_Per_Day * Part_Day_Hr;
 
-                System.out.println("Employee daily wage is " + Emp_Wage );
+                Monthly_Wage+=Emp_Wage;
 
                  }
                  break;
 
-        default: {
+         default:
 
-                System.out.println("Employee daily wage is 0 " );
+                break;
 
-                 }
-             }
-        }
+
+                        }
+
+                  }
+
+        System.out.println("Monthly Wage Of Employee Is " + Monthly_Wage);
+
+         }
    }
-
